@@ -108,7 +108,6 @@ export default function TaskScreen({ Item, isTime, HeaderLog }) {
             for (let data of global.taskList[Item]) {
               data.completed = false;
             }
-
             setList(global.taskList[Item]);
             addTask(global.taskList[Item].pop().data);
           },
@@ -119,7 +118,7 @@ export default function TaskScreen({ Item, isTime, HeaderLog }) {
       ]);
     } else {
       ToastAndroid.show(
-        "oops!! You Haven't added task yet",
+        "oops!! You Haven't added task yet",//throws an error
         ToastAndroid.SHORT
       );
     }
